@@ -1,3 +1,5 @@
+package main;
+
 import javax.swing.*;
 
 public class Main {
@@ -11,5 +13,6 @@ public class Main {
         window.setTitle("2D Game Test");
         //centers window location to the middle of the screen
         window.setLocationRelativeTo(null);
+        window.setVisible(true);
     }
 }

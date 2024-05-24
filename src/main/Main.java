@@ -11,6 +11,11 @@ public class Main {
         window.setResizable(false);
         //Window title
         window.setTitle("2D Game Test");
+
+        GamePanel gamePanel = new GamePanel();
+        window.add(gamePanel);
+        window.pack();
+
         //centers window location to the middle of the screen
         window.setLocationRelativeTo(null);
         window.setVisible(true);

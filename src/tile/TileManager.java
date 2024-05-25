@@ -57,7 +57,7 @@ public class TileManager {
             //plants
             tile[13] = new Tile();
             tile[13].image = ImageIO.read(getClass().getResourceAsStream("/tiles/maguey.png"));
-            
+
         }catch (IOException e){
             e.printStackTrace();
         }

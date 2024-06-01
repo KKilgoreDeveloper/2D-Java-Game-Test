@@ -1,5 +1,6 @@
 package entity;
 
+import main.CollisionCheck;
 import main.GamePanel;
 import main.KeyHandler;
 
@@ -20,6 +21,13 @@ public class Player extends Entity{
 
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
         screenY = gp. screenHeight/2 - (gp.tileSize/2);
+
+        solidArea = new Rectangle();
+        solidArea.width = 32;
+        solidArea.height = 32;
+        solidArea.x = 8;
+        solidArea.y = 16;
+
 
         setDefaultValues();
         getPlayerImage();
@@ -52,30 +60,48 @@ public class Player extends Entity{
 
         if(keyH.upPressed == true){
             direction = "up";
-            worldY -= speed;
         }
         if(keyH.downPressed == true){
             direction = "down";
-            worldY += speed;
         }
         if(keyH.leftPressed == true){
             direction = "left";
-            worldX -= speed;
         }
         if(keyH.rightPressed == true){
             direction = "right";
-            worldX += speed;
         }
-        spriteCounter++;
-        if(spriteCounter > 11){
-            if(spriteNum==1){
-                spriteNum = 2;
-            } else if (spriteNum == 2){
-                spriteNum = 1;
+
+        //CHECK TILE COLLISION
+        collisionOn = false;
+        gp.cCheck.checkTile(this);
+        //If collision is false, player can move
+            if (collisionOn == false) {
+                switch (direction) {
+                    case "up":
+                        worldY -= speed;
+                        break;
+                    case "down":
+                        worldY += speed;
+                        break;
+                    case "left":
+                        worldX -= speed;
+                        break;
+                    case "right":
+                        worldX += speed;
+                        break;
+                }
             }
-            spriteCounter = 0;
+            spriteCounter++;
+            if(spriteCounter > 11){
+                if(spriteNum==1){
+                    spriteNum = 2;
+                } else if (spriteNum == 2){
+                    spriteNum = 1;
+                }
+                spriteCounter = 0;
+            }
         }
-        }
+
     }
     public void draw(Graphics2D g2){
         //g2.setColor(Color.white);

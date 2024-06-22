@@ -14,6 +14,7 @@ public class Player extends Entity{
     KeyHandler keyH;
     public final int screenX;
     public final int screenY;
+    int hasKey = 0;
 
     public Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
@@ -25,6 +26,8 @@ public class Player extends Entity{
         solidArea = new Rectangle();
         solidArea.width = 32;
         solidArea.height = 32;
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
         solidArea.x = 8;
         solidArea.y = 16;
 
@@ -74,6 +77,11 @@ public class Player extends Entity{
         //CHECK TILE COLLISION
         collisionOn = false;
         gp.cCheck.checkTile(this);
+
+        //CHECK OBJECT COLLISION
+        int objIndex = gp.cCheck.checkObject (this, true);
+        pickUpObject(objIndex);
+
         //If collision is false, player can move
             if (collisionOn == false) {
                 switch (direction) {
@@ -103,6 +111,31 @@ public class Player extends Entity{
         }
 
     }
+
+    public void pickUpObject(int i){
+        if(i != 999){
+
+            String objectName = gp.obj[i].name;
+
+            switch(objectName){
+                case "Key":
+                    hasKey++;
+                    gp.obj[i] = null;
+                    System.out.println("Key:"+hasKey);
+                    break;
+                case "Curtain":
+                    if(hasKey > 0){
+                        gp.obj[i] = null;
+                        hasKey--;
+                        System.out.println("Key:"+hasKey);
+                    }
+                    break;
+                case "Basket":
+                    break;
+            }
+        }
+    }
+
     public void draw(Graphics2D g2){
         //g2.setColor(Color.white);
         //g2.fillRect(x, y, gp.tileSize, gp.tileSize);

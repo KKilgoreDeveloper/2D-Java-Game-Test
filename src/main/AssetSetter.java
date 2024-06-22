@@ -1,6 +1,7 @@
 package main;
 
 import object.OBJ_Basket;
+import object.OBJ_Headdress;
 import object.OBJ_Key;
 import object.OBJ_Curtain;
 
@@ -43,5 +44,11 @@ public class AssetSetter {
         gp.obj[7] = new OBJ_Basket();
         gp.obj[7].worldX = 43 * gp.tileSize;
         gp.obj[7].worldY = 32 * gp.tileSize;
+
+        //Headdress
+        gp.obj[8] = new OBJ_Headdress();
+        gp.obj[8].worldX = 40 * gp.tileSize;
+        gp.obj[8].worldY = 5 * gp.tileSize;
+
     }
 }

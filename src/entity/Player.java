@@ -122,17 +122,23 @@ public class Player extends Entity{
                     gp.playSE(1);
                     hasKey++;
                     gp.obj[i] = null;
-                    System.out.println("Key:"+hasKey);
+                    gp.ui.showMessage("You got a key!");
                     break;
                 case "Curtain":
                     if(hasKey > 0){
                         gp.playSE(3);
                         gp.obj[i] = null;
                         hasKey--;
+                        gp.ui.showMessage("You broke in!");
                         System.out.println("Key:"+hasKey);
+                    }
+                    else {
+                        gp.ui.showMessage("You need a key...");
                     }
                     break;
                 case "Basket":
+                    gp.ui.gameFinished = true;
+                    gp.stopMusic();
                     break;
                 case "Headdress":
                     gp.playSE(2);

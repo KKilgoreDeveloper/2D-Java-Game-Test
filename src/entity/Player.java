@@ -15,6 +15,7 @@ public class Player extends Entity{
     public final int screenX;
     public final int screenY;
     public int hasKey = 0;
+    int standCounter;
 
     public Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
@@ -52,6 +53,7 @@ public class Player extends Entity{
             left2 = ImageIO.read(getClass().getResourceAsStream("/player/coyote_left_2.png"));
             right1 = ImageIO.read(getClass().getResourceAsStream("/player/coyote_right_1.png"));
             right2 = ImageIO.read(getClass().getResourceAsStream("/player/coyote_right_2.png"));
+            stand = ImageIO.read(getClass().getResourceAsStream("/player/coyote_stand.png"));
 
         } catch(IOException e){
             e.printStackTrace();
@@ -108,6 +110,14 @@ public class Player extends Entity{
                 }
                 spriteCounter = 0;
             }
+        }
+        else {
+            standCounter++;
+            if (standCounter == 20){
+                spriteNum = 1;
+                standCounter = 0;
+            }
+
         }
 
     }
@@ -187,6 +197,7 @@ public class Player extends Entity{
                     image = right2;
                 }
                 break;
+
         }
         g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
     }

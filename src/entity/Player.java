@@ -110,14 +110,12 @@ public class Player extends Entity{
                 }
                 spriteCounter = 0;
             }
-        }
-        else {
+        } else {
             standCounter++;
             if (standCounter == 20){
                 spriteNum = 1;
                 standCounter = 0;
             }
-
         }
 
     }
@@ -166,38 +164,57 @@ public class Player extends Entity{
         BufferedImage image = null;
         switch(direction) {
             case"up":
-                if (spriteNum == 1){
-                    image = up1;
-            }
-               if(spriteNum == 2){
-                   image = up2;
+               if (spriteNum == 1 || spriteNum == 2){
+                   if (spriteNum == 1){
+                       image = up1;
+                   }
+                   if(spriteNum == 2){
+                       image = up2;
+                   }
+               } else {
+                   spriteNum = 0;
                }
                 break;
             case"down":
-                if (spriteNum == 1){
-                    image = down1;
-                }
-                if (spriteNum == 2){
-                    image = down2;
+                if (spriteNum == 1 || spriteNum == 2){
+                    if (spriteNum == 1){
+                        image = down1;
+                    }
+                    if(spriteNum == 2){
+                        image = down2;
+                    }
+                } else {
+                    spriteNum = 0;
                 }
                 break;
             case"left":
-                if (spriteNum == 1){
-                    image = left1;
-                }
-                if (spriteNum == 2){
-                    image = left2;
+                if (spriteNum == 1 || spriteNum == 2){
+                    if (spriteNum == 1){
+                        image = left1;
+                    }
+                    if(spriteNum == 2){
+                        image = left2;
+                    }
+                } else {
+                    spriteNum = 0;
                 }
                 break;
             case"right":
-                if (spriteNum == 1){
-                    image = right1;
-                }
-                if (spriteNum == 2){
-                    image = right2;
+                if (spriteNum == 1 || spriteNum == 2){
+                    if (spriteNum == 1){
+                        image = right1;
+                    }
+                    if(spriteNum == 2){
+                        image = right2;
+                    }
+                } else {
+                    spriteNum = 0;
                 }
                 break;
 
+        }
+        if (spriteNum == 0){
+            image = stand;
         }
         g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
     }

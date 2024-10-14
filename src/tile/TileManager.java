@@ -29,6 +29,8 @@ public class TileManager {
         setup(0,"DGrs", false);
         setup(14,"GrsVar1", false);
         setup(15,"GrsVar2", false);
+        setup(16,"ancient", false);
+        setup(17,"rock", false);
 
         //adobe wall
         setup(1,"adobewallupdated", true);

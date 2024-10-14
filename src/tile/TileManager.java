@@ -26,7 +26,8 @@ public class TileManager {
     public void getTileImage() {
 
         //grass
-        setup(0,"grass", false);
+        setup(0,"DGrs", false);
+        setup(14,"GrsVar1", false);
 
         //adobe wall
         setup(1,"adobewallupdated", true);

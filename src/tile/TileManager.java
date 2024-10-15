@@ -31,6 +31,7 @@ public class TileManager {
         setup(15,"GrsVar2", false);
         setup(16,"ancient", false);
         setup(17,"rock", false);
+        setup(18,"skull", false);
 
         //adobe wall
         setup(1,"adobewallupdated", true);

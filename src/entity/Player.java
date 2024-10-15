@@ -49,6 +49,8 @@ public class Player extends Entity{
         up2 = setup("coyote_up_2");
         down1 = setup("coyote_down_1");
         down2 = setup("coyote_down_2");
+        down3 = setup("coyote_down_3");
+        down4 = setup("coyote_down_4");
         left1 = setup("coyote_left_1");
         left2 = setup("coyote_left_2");
         right1 = setup("coyote_right_1");
@@ -185,12 +187,24 @@ public class Player extends Entity{
                }
                 break;
             case"down":
-                if (spriteNum == 1 || spriteNum == 2){
+                if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3|| spriteNum == 4|| spriteNum == 5|| spriteNum == 6){
                     if (spriteNum == 1){
                         image = down1;
                     }
                     if(spriteNum == 2){
                         image = down2;
+                    }
+                    if (spriteNum == 3){
+                        image = down1;
+                    }
+                    if(spriteNum == 4){
+                        image = down3;
+                    }
+                    if (spriteNum == 5){
+                        image = down4;
+                    }
+                    if(spriteNum == 6){
+                        image = down3;
                     }
                 } else {
                     spriteNum = 0;

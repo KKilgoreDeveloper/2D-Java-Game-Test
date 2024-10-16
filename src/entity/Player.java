@@ -17,6 +17,7 @@ public class Player extends Entity{
     public final int screenY;
     public int hasKey = 0;
     int standCounter;
+    int spriteChangeCounter = 0;
 
     public Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
@@ -55,7 +56,7 @@ public class Player extends Entity{
         left2 = setup("coyote_left_2");
         right1 = setup("coyote_right_1");
         right2 = setup("coyote_right_2");
-        stand = setup("coyote_stand");
+        stand = setup("coyote_down_1");
 
     }
     public BufferedImage setup (String imageName){
@@ -113,10 +114,19 @@ public class Player extends Entity{
                 }
             }
             spriteCounter++;
+            spriteCounter++;
             if(spriteCounter > 11){
                 if(spriteNum==1){
                     spriteNum = 2;
                 } else if (spriteNum == 2){
+                    spriteNum = 3;
+                } else if (spriteNum == 3){
+                    spriteNum = 4;
+                } else if (spriteNum == 4){
+                    spriteNum = 5;
+                } else if (spriteNum == 5){
+                    spriteNum = 6;
+                } else if (spriteNum == 6){
                     spriteNum = 1;
                 }
                 spriteCounter = 0;
@@ -187,7 +197,8 @@ public class Player extends Entity{
                }
                 break;
             case"down":
-                if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3|| spriteNum == 4|| spriteNum == 5|| spriteNum == 6){
+                if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3 || spriteNum == 4 || spriteNum == 5 || spriteNum == 6){
+
                     if (spriteNum == 1){
                         image = down1;
                     }
@@ -195,17 +206,18 @@ public class Player extends Entity{
                         image = down2;
                     }
                     if (spriteNum == 3){
-                        image = down1;
+                        image = down3;
                     }
                     if(spriteNum == 4){
-                        image = down3;
-                    }
-                    if (spriteNum == 5){
                         image = down4;
                     }
-                    if(spriteNum == 6){
+                    if (spriteNum == 5){
                         image = down3;
                     }
+                    if(spriteNum == 6){
+                        image = down2;
+                    }
+
                 } else {
                     spriteNum = 0;
                 }

@@ -247,15 +247,27 @@ public class Player extends Entity{
                 }
                 break;
             case"right":
-                if (spriteNum == 1 || spriteNum == 2){
+                if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3 || spriteNum == 4 || spriteNum == 5 || spriteNum == 6){
                     if (spriteNum == 1){
                         image = right1;
                     }
                     if(spriteNum == 2){
                         image = right2;
                     }
+                    if (spriteNum == 3){
+                        image = right1;
+                    }
+                    if(spriteNum == 4){
+                        image = right2;
+                    }
+                    if (spriteNum == 5){
+                        image = right1;
+                    }
+                    if(spriteNum == 6){
+                        image = right2;
+                    }
                 } else {
-                    spriteNum = 1;
+                    spriteNum = 0;
                 }
                 break;
 

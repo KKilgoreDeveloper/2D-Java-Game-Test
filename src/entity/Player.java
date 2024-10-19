@@ -56,7 +56,7 @@ public class Player extends Entity{
         left2 = setup("coyote_left_2");
         right1 = setup("coyote_right_1");
         right2 = setup("coyote_right_2");
-        stand = setup("coyote_down_1");
+        stand = setup("coyote_stand");
 
     }
     public BufferedImage setup (String imageName){
@@ -193,7 +193,7 @@ public class Player extends Entity{
                        image = up2;
                    }
                } else {
-                   spriteNum = 0;
+                   spriteNum = 1;
                }
                 break;
             case"down":
@@ -223,11 +223,23 @@ public class Player extends Entity{
                 }
                 break;
             case"left":
-                if (spriteNum == 1 || spriteNum == 2){
+                if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3 || spriteNum == 4 || spriteNum == 5 || spriteNum == 6){
                     if (spriteNum == 1){
                         image = left1;
                     }
                     if(spriteNum == 2){
+                        image = left2;
+                    }
+                    if (spriteNum == 3){
+                        image = left1;
+                    }
+                    if(spriteNum == 4){
+                        image = left2;
+                    }
+                    if (spriteNum == 5){
+                        image = left1;
+                    }
+                    if(spriteNum == 6){
                         image = left2;
                     }
                 } else {
@@ -243,7 +255,7 @@ public class Player extends Entity{
                         image = right2;
                     }
                 } else {
-                    spriteNum = 0;
+                    spriteNum = 1;
                 }
                 break;
 

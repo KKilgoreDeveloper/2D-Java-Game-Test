@@ -7,7 +7,8 @@ to add my own unique ideas and flare and hopefully create something neat!
 Controls so far:
 
 -Use WASD to move player character
-- P: Pause
+
+-P: Pause
 
 Functions:
 Can pick up keys to open entrances (tho they're curtains instead of doors so doesn't really make sense so far, but whatever)

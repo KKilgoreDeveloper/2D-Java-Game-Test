@@ -50,13 +50,10 @@ public class Player extends Entity{
         up2 = setup("coyote_up_2");
         down1 = setup("coyote_down_1");
         down2 = setup("coyote_down_2");
-        down3 = setup("coyote_down_3");
-        down4 = setup("coyote_down_4");
         left1 = setup("coyote_left_1");
         left2 = setup("coyote_left_2");
         right1 = setup("coyote_right_1");
         right2 = setup("coyote_right_2");
-        stand = setup("coyote_stand");
 
     }
     public BufferedImage setup (String imageName){
@@ -114,19 +111,10 @@ public class Player extends Entity{
                 }
             }
             spriteCounter++;
-            spriteCounter++;
             if(spriteCounter > 11){
                 if(spriteNum==1){
                     spriteNum = 2;
                 } else if (spriteNum == 2){
-                    spriteNum = 3;
-                } else if (spriteNum == 3){
-                    spriteNum = 4;
-                } else if (spriteNum == 4){
-                    spriteNum = 5;
-                } else if (spriteNum == 5){
-                    spriteNum = 6;
-                } else if (spriteNum == 6){
                     spriteNum = 1;
                 }
                 spriteCounter = 0;
@@ -185,31 +173,20 @@ public class Player extends Entity{
         BufferedImage image = null;
         switch(direction) {
             case"up":
-               if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3 || spriteNum == 4 || spriteNum == 5 || spriteNum == 6){
+               if (spriteNum == 1 || spriteNum == 2){
                    if (spriteNum == 1){
                        image = up1;
                    }
                    if(spriteNum == 2){
                        image = up2;
                    }
-                   if (spriteNum == 3){
-                       image = up1;
-                   }
-                   if(spriteNum == 4){
-                       image = up2;
-                   }
-                   if (spriteNum == 5){
-                       image = up1;
-                   }
-                   if(spriteNum == 6){
-                       image = up2;
-                   }
+
                } else {
                    spriteNum = 0;
                }
                 break;
             case"down":
-                if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3 || spriteNum == 4 || spriteNum == 5 || spriteNum == 6){
+                if (spriteNum == 1 || spriteNum == 2){
 
                     if (spriteNum == 1){
                         image = down1;
@@ -217,41 +194,18 @@ public class Player extends Entity{
                     if(spriteNum == 2){
                         image = down2;
                     }
-                    if (spriteNum == 3){
-                        image = down3;
-                    }
-                    if(spriteNum == 4){
-                        image = down4;
-                    }
-                    if (spriteNum == 5){
-                        image = down3;
-                    }
-                    if(spriteNum == 6){
-                        image = down2;
-                    }
+
 
                 } else {
                     spriteNum = 0;
                 }
                 break;
             case"left":
-                if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3 || spriteNum == 4 || spriteNum == 5 || spriteNum == 6){
+                if (spriteNum == 1 || spriteNum == 2){
                     if (spriteNum == 1){
                         image = left1;
                     }
                     if(spriteNum == 2){
-                        image = left2;
-                    }
-                    if (spriteNum == 3){
-                        image = left1;
-                    }
-                    if(spriteNum == 4){
-                        image = left2;
-                    }
-                    if (spriteNum == 5){
-                        image = left1;
-                    }
-                    if(spriteNum == 6){
                         image = left2;
                     }
                 } else {
@@ -259,23 +213,11 @@ public class Player extends Entity{
                 }
                 break;
             case"right":
-                if (spriteNum == 1 || spriteNum == 2 || spriteNum == 3 || spriteNum == 4 || spriteNum == 5 || spriteNum == 6){
+                if (spriteNum == 1 || spriteNum == 2){
                     if (spriteNum == 1){
                         image = right1;
                     }
                     if(spriteNum == 2){
-                        image = right2;
-                    }
-                    if (spriteNum == 3){
-                        image = right1;
-                    }
-                    if(spriteNum == 4){
-                        image = right2;
-                    }
-                    if (spriteNum == 5){
-                        image = right1;
-                    }
-                    if(spriteNum == 6){
                         image = right2;
                     }
                 } else {

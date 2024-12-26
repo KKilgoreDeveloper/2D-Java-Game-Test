@@ -10,5 +10,14 @@ Controls so far:
 
 -P: Pause
 
-Functions:
-Can pick up keys to open entrances (tho they're curtains instead of doors so doesn't really make sense so far, but whatever)
+Current Functions:
+
+-REMOVED Objects, will likely be added later (so no more object interactions for now)
+
+-Can walk around
+
+-NPC interaction and dialogue will be added soon
+
+Removed/Disabled Functions:
+
+Could pick up keys to open entrances (tho they're curtains instead of doors so doesn't really make sense so far, but whatever)

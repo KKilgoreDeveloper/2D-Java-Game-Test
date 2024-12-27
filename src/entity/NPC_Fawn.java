@@ -12,6 +12,7 @@ public class NPC_Fawn extends Entity{
         speed = 2;
 
         getImage();
+        setDialogue();
     }
 
     public void getImage(){
@@ -25,6 +26,11 @@ public class NPC_Fawn extends Entity{
         right1 = setup("/npc/fawn-right1");
         right2 = setup("/npc/fawn-right2");
 
+    }
+    public void setDialogue(){
+        dialogues[0] = "Hello! I haven't seen you around before.";
+        dialogues[1] = "I HOPE YOU'RE NOT A DANGER *hehe*";
+        dialogues[2] = "Where are you from???";
     }
     public void setAction(){
 
@@ -50,6 +56,14 @@ public class NPC_Fawn extends Entity{
             actionLockCounter = 0;
         }
 
+    }
+    public void speak(){
+
+        if (dialogues[dialogueIndex] == null){
+            dialogueIndex = 0;
+        }
+        gp.ui.currentDialogue = dialogues[dialogueIndex];
+        dialogueIndex++;
     }
 
 }

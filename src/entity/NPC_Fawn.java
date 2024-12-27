@@ -28,8 +28,8 @@ public class NPC_Fawn extends Entity{
 
     }
     public void setDialogue(){
-        dialogues[0] = "Hello! I haven't seen you around before.";
-        dialogues[1] = "I HOPE YOU'RE NOT A DANGER *hehe*";
+        dialogues[0] = "Hello! I haven't seen you around@ before.@ I HOPE YOU'RE NOT A DANGER *hehe*";
+        dialogues[1] = "Let's be friends!";
         dialogues[2] = "Where are you from???";
     }
     public void setAction(){
@@ -57,13 +57,10 @@ public class NPC_Fawn extends Entity{
         }
 
     }
-    public void speak(){
 
-        if (dialogues[dialogueIndex] == null){
-            dialogueIndex = 0;
-        }
-        gp.ui.currentDialogue = dialogues[dialogueIndex];
-        dialogueIndex++;
+    public void speak(){
+        //Do character-specific stuff
+        super.speak();
     }
 
 }

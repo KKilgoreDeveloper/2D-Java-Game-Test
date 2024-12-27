@@ -11,16 +11,15 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 public class Player extends Entity{
-    GamePanel gp;
     KeyHandler keyH;
     public final int screenX;
     public final int screenY;
-    public int hasKey = 0;
-    int standCounter;
-    int spriteChangeCounter = 0;
+    int standCounter = 0;
 
     public Player(GamePanel gp, KeyHandler keyH){
-        this.gp = gp;
+
+        super(gp);
+
         this.keyH = keyH;
 
         screenX = gp.screenWidth/2 - (gp.tileSize/2);
@@ -46,28 +45,17 @@ public class Player extends Entity{
     }
     public void getPlayerImage(){
 
-        up1 = setup("coyote_up_1");
-        up2 = setup("coyote_up_2");
-        down1 = setup("coyote_down_1");
-        down2 = setup("coyote_down_2");
-        left1 = setup("coyote_left_1");
-        left2 = setup("coyote_left_2");
-        right1 = setup("coyote_right_1");
-        right2 = setup("coyote_right_2");
+        up1 = setup("/player/coyote_up_1");
+        up2 = setup("/player/coyote_up_2");
+        down1 = setup("/player/coyote_down_1");
+        down2 = setup("/player/coyote_down_2");
+        left1 = setup("/player/coyote_left_1");
+        left2 = setup("/player/coyote_left_2");
+        right1 = setup("/player/coyote_right_1");
+        right2 = setup("/player/coyote_right_2");
 
     }
-    public BufferedImage setup (String imageName){
-        UtilityTool uTool = new UtilityTool();
-        BufferedImage image= null;
 
-        try{
-            image = ImageIO.read(getClass().getResourceAsStream("/player/" + imageName + ".png"));
-            image = uTool.scaleImage(image, gp.tileSize, gp.tileSize);
-        }catch(IOException e){
-            e.printStackTrace();
-        }
-        return image;
-    }
     public void update(){
 
         if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true){

@@ -16,7 +16,7 @@ Current Functions:
 
 -Can walk around
 
--NPC interaction and dialogue will be added soon
+-npc interaction and dialogue will be added soon
 
 Removed/Disabled Functions:
 

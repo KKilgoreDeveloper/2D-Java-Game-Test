@@ -1,5 +1,6 @@
 package main;
 
+import entity.NPC_Fawn;
 import object.OBJ_Basket;
 import object.OBJ_Headdress;
 import object.OBJ_Key;
@@ -14,6 +15,11 @@ public class AssetSetter {
 
     public void setObject() {
 
+    }
+    public void setNPC() {
 
+        gp.npc[0] = new NPC_Fawn(gp);
+        gp.npc[0].worldX = gp.tileSize*21;
+        gp.npc[0].worldY = gp.tileSize*21;
     }
 }

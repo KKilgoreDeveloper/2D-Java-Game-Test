@@ -12,6 +12,7 @@ public class NPC_Panther extends Entity{
         speed = 1;
 
         getImage();
+        setDialogue();
     }
 
 
@@ -27,6 +28,12 @@ public class NPC_Panther extends Entity{
         right2 = setup("/npc/panther-right2");
 
     }
+    public void setDialogue(){
+        dialogues[0] = "Oh, hello.";
+        dialogues[1] = "Do you want something?";
+        dialogues[2] = "Interesting how you don't talk much...";
+    }
+
     public void setAction(){
 
         actionLockCounter++;
@@ -51,5 +58,9 @@ public class NPC_Panther extends Entity{
             actionLockCounter = 0;
         }
 
+    }
+    public void speak(){
+        //Do character-specific stuff
+        super.speak();
     }
 }

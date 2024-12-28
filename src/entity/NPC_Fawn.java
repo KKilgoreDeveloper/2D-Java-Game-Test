@@ -28,7 +28,7 @@ public class NPC_Fawn extends Entity{
 
     }
     public void setDialogue(){
-        dialogues[0] = "Hello! I haven't seen you around@ before.@ I HOPE YOU'RE NOT A DANGER *hehe*";
+        dialogues[0] = "Hello! I haven't seen you around@before.@I HOPE YOU'RE NOT A DANGER *hehe*";
         dialogues[1] = "Let's be friends!";
         dialogues[2] = "Where are you from???";
     }

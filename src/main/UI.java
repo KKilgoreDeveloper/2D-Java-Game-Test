@@ -4,12 +4,14 @@ import object.OBJ_Key;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.io.InputStream;
 import java.text.DecimalFormat;
 
 public class UI {
     GamePanel gp;
     Graphics2D g2;
-    Font arial_40, arial_80B;
+    Font lowresPixel;
     // BufferedImage keyImage;
     public boolean messageOn = false;
     public String message = "";
@@ -19,8 +21,15 @@ public class UI {
 
     public UI(GamePanel gp){
         this.gp = gp;
-        arial_40 = new Font("Arial", Font.PLAIN, 40);
-        arial_80B = new Font("Arial", Font.BOLD, 80);
+
+        try{
+            InputStream is = getClass().getResourceAsStream("/fonts/LowresPixel-Regular.otf");
+            lowresPixel = Font.createFont(Font.TRUETYPE_FONT, is);
+        } catch (FontFormatException e){
+            e.printStackTrace();
+        } catch (IOException e){
+            e.printStackTrace();
+        }
 
     }
     public void showMessage (String text) {
@@ -31,7 +40,7 @@ public class UI {
 
         this.g2 = g2;
 
-        g2.setFont(arial_40);
+        g2.setFont(lowresPixel);
         g2.setColor(Color.white);
         //PLAY STATE
         if(gp.gameState == gp.playState){

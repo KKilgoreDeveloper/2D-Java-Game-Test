@@ -30,15 +30,15 @@ public class Entity {
         this.gp = gp;
     }
     public void setAction() {}
-    public void speak(){
+    public void speak() {
 
-        if (dialogues[dialogueIndex] == null){
+        if (dialogues[dialogueIndex] == null) {
             dialogueIndex = 0;
         }
         gp.ui.currentDialogue = dialogues[dialogueIndex];
         dialogueIndex++;
 
-        switch (gp.player.direction){
+        switch (gp.player.direction) {
             case "up":
                 direction = "down";
                 break;
@@ -52,6 +52,7 @@ public class Entity {
                 direction = "left";
                 break;
         }
+    }
     public void update() {
         setAction();
 

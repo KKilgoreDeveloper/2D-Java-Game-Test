@@ -7,7 +7,6 @@ import javax.imageio.ImageIO;
 
 public class OBJ_Key extends SuperObject{
     GamePanel gp;
-    private int gitTest;
 
     public OBJ_Key(GamePanel gp){
         this.gp = gp;

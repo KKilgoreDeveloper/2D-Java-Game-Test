@@ -1,6 +1,7 @@
 package main;
 
 import entity.NPC_Fawn;
+import entity.NPC_Macaw;
 import entity.NPC_Panther;
 import object.OBJ_Basket;
 import object.OBJ_Headdress;
@@ -26,5 +27,9 @@ public class AssetSetter {
         gp.npc[1] = new NPC_Panther(gp);
         gp.npc[1].worldX = gp.tileSize*24;
         gp.npc[1].worldY = gp.tileSize*24;
+
+        gp.npc[1] = new NPC_Macaw(gp);
+        gp.npc[1].worldX = gp.tileSize*34;
+        gp.npc[1].worldY = gp.tileSize*25;
     }
 }

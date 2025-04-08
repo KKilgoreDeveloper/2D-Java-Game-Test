@@ -20,6 +20,7 @@ public class EventHandler {
     }
     public void checkEvent(){
         if (hit(11,11,"right") == true){damagePit(gp.dialogueState);}
+        if (hit(21,12,"up") == true){healingPool(gp.dialogueState);}
     }
     public boolean hit(int eventCol, int eventRow, String reqDirection){
         boolean hit = false;
@@ -41,8 +42,16 @@ public class EventHandler {
     }
     public void damagePit(int gameState){
         gp.gameState = gameState;
-        gp.ui.currentDialogue = "OWCH!";
+        gp.ui.currentDialogue = "OWCH! you tripped!";
         gp.player.life -= 1;
+    }
+
+    public void healingPool(int gameState){
+        if(gp.keyH.enterPressed == true){
+            gp.gameState = gameState;
+            gp.ui.currentDialogue = "Refreshing!";
+            gp.player.life = gp.player.maxLife;
+        }
     }
 
 

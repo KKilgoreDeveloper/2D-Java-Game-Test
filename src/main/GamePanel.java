@@ -6,6 +6,10 @@ import tile.TileManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class GamePanel extends JPanel implements Runnable {
     //SCREEN SETTINGS
@@ -40,6 +44,7 @@ public class GamePanel extends JPanel implements Runnable {
     public Player player = new Player(this,keyH);
     public Entity obj[] = new Entity[10];
     public Entity npc[] = new Entity[10];
+    ArrayList<Entity> entityList = new ArrayList<>();
 
     //GAME STATE
     public int gameState;
@@ -135,21 +140,34 @@ public class GamePanel extends JPanel implements Runnable {
             //TILE
             tileM.draw(g2);
 
-            //OBJECT
-            for(int i =0; i < obj.length; i++){
-                if (obj[i] != null){
-                    obj[i].draw(g2, this);
+            //ADD ENTITIES TO LIST
+            entityList.add(player);
+            for (int i = 0; i < npc.length; i++){
+                if (npc[i] != null){
+                    entityList.add(npc[i]);
                 }
             }
-            //NPC
-            for(int i =0; i < npc.length; i++){
-                if (npc[i] != null){
-                    npc[i].draw(g2);
+            for (int i = 0; i < obj.length; i++){
+                if (obj[i] != null){
+                    entityList.add(obj[i]);
                 }
             }
 
-            //PLAYER
-            player.draw(g2);
+            //SORT
+            Collections.sort(entityList, new Comparator<Entity>() {
+                @Override
+                public int compare(Entity e1, Entity e2) {
+                    int result = Integer.compare(e2.worldY, e2.worldY);
+                    return result;
+                }
+            });
+
+            //DRAW ENTITIES
+            for (int i = 0; i < entityList.size(); i++){
+                entityList.get(i).draw(g2);
+            }
+            //EMPTY LIST
+                entityList.clear();
 
             //UI
             ui.draw(g2);

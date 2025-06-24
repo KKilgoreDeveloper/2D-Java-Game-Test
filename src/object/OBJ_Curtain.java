@@ -9,6 +9,15 @@ public class OBJ_Curtain extends Entity {
     public OBJ_Curtain(GamePanel gp){
         super(gp);
         name = "Curtain";
-        down1 = setup("/objects/curtain.png");
+        down1 = setup("/objects/curtain");
+        collision = true;
+
+        solidArea.x = 0;
+        solidArea.y = 16;
+        solidArea.width = 48;
+        solidArea.height = 32;
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
+
     }
 }

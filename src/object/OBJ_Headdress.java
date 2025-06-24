@@ -9,6 +9,6 @@ public class OBJ_Headdress extends Entity {
     public OBJ_Headdress(GamePanel gp){
         super(gp);
         name = "Headdress";
-        down1 = setup("/objects/headdress.png");
+        down1 = setup("/objects/headdress");
     }
 }

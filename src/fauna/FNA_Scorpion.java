@@ -19,6 +19,7 @@ public class FNA_Scorpion extends Entity{
         solidArea.height = 30;
         solidAreaDefaultY = solidArea.y;
         solidAreaDefaultX = solidArea.x;
+
         getImage();
     }
     public void getImage(){

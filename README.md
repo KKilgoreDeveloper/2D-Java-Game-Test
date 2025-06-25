@@ -14,9 +14,15 @@ Current Functions:
 
 -REMOVED Objects, will likely be added later (so no more object interactions for now)
 
--Can walk around
+-Player can walk
 
--npc interaction and dialogue will be added soon
+-Player can interact with NPCs
+
+-Player can take damage
+
+-Player can restore damage taken
+
+-Player can trigger events
 
 Removed/Disabled Functions:
 

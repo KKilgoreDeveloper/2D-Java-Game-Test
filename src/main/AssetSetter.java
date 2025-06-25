@@ -4,6 +4,7 @@ import entity.NPC_Fawn;
 import entity.NPC_Macaw;
 import entity.NPC_Opossum;
 import entity.NPC_Panther;
+import fauna.FNA_Benji;
 import fauna.FNA_Scorpion;
 import object.OBJ_Basket;
 import object.OBJ_Headdress;
@@ -50,5 +51,9 @@ public class AssetSetter {
         gp.fauna[1] = new FNA_Scorpion(gp);
         gp.fauna[1].worldX = gp.tileSize*17;
         gp.fauna[1].worldY = gp.tileSize*26;
+
+        gp.fauna[2] = new FNA_Benji(gp);
+        gp.fauna[2].worldX = gp.tileSize*7;
+        gp.fauna[2].worldY = gp.tileSize*26;
     }
 }

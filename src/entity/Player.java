@@ -89,6 +89,10 @@ public class Player extends Entity{
         int npcIndex = gp.cCheck.checkEntity(this, gp.npc);
         interactNPC(npcIndex);
 
+        //CHECK FAUNA COLLISION
+        int faunaIndex = gp.cCheck.checkEntity(this, gp.fauna);
+
+
         //CHECK EVENT
         gp.eHandler.checkEvent();
         gp.keyH.enterPressed = false;

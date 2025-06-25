@@ -230,16 +230,26 @@ public class Player extends Entity{
                     spriteNum = 0;
                 }
                 break;
+        }
+        if (invincible == true && invincibleCounter < 60){
+            if (hurtCounter < 25){
+                hurtCounter += 9;
+                g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.5f));
+            }
+            if (hurtCounter > 25){
+                g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+                hurtCounter = 0;
+            }
+        }
 
-        }
-        if (spriteNum == 0){
-            image = stand;
-        }
         g2.drawImage(image, screenX, screenY, null);
 
+        //Reset alpha
+        g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f));
+
         //DEBUG
-        g2.setFont(new Font("Arial",Font.PLAIN,26 ));
-        g2.setColor(Color.WHITE);
-        g2.drawString("invincible: " + invincibleCounter, 10, 400);
+        //g2.setFont(new Font("Arial",Font.PLAIN,26 ));
+        //g2.setColor(Color.WHITE);
+        //g2.drawString("invincible: " + invincibleCounter, 10, 400);
     }
 }

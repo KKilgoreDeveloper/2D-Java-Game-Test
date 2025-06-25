@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.util.Collection;
 
 public class Player extends Entity{
     KeyHandler keyH;
@@ -91,6 +92,7 @@ public class Player extends Entity{
 
         //CHECK FAUNA COLLISION
         int faunaIndex = gp.cCheck.checkEntity(this, gp.fauna);
+        contactFauna(faunaIndex);
 
 
         //CHECK EVENT
@@ -123,6 +125,15 @@ public class Player extends Entity{
             }
         }
 
+        //this needs to be outside of key if statement!
+        if (invincible == true){
+            invincibleCounter++;
+            if (invincibleCounter > 60){
+                invincible = false;
+                invincibleCounter = 0;
+            }
+        }
+
     }
 
     public void pickUpObject(int i){
@@ -139,6 +150,16 @@ public class Player extends Entity{
                 gp.npc[i].speak();
             }
             gp.keyH.enterPressed = false;
+        }
+    }
+
+    public void contactFauna(int i){
+        if (i != 999){
+            if (invincible == false){
+                life -= 1;
+                invincible = true;
+            }
+
         }
     }
 
@@ -206,5 +227,10 @@ public class Player extends Entity{
             image = stand;
         }
         g2.drawImage(image, screenX, screenY, null);
+
+        //DEBUG
+        g2.setFont(new Font("Arial",Font.PLAIN,26 ));
+        g2.setColor(Color.WHITE);
+        g2.drawString("invincible: " + invincibleCounter, 10, 400);
     }
 }

@@ -14,7 +14,7 @@ public class FNA_Scorpion extends Entity{
         life = maxLife;
 
         solidArea.x = 3;
-        solidArea.y = 18;
+        solidArea.y = -18;
         solidArea.width = 42;
         solidArea.height = 30;
         solidAreaDefaultY = solidArea.y;

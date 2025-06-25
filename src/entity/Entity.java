@@ -74,11 +74,13 @@ public class Entity {
         gp.cCheck.checkEntity(this, gp.fauna);
         boolean contactPlayer = gp.cCheck.checkPlayer(this);
 
-        if (this.type == 2 & contactPlayer == true){
+        if (this.type == 2 && contactPlayer == true){
             if (gp.player.invincible == false){
-                //we can give damage
-                gp.player.life -= 1;
-                gp.player.invincible = true;
+                if (this.faunaType == 2){
+                    //offensive fauna can walk into player and give damage
+                    gp.player.life -= 1;
+                    gp.player.invincible = true;
+                }
             }
         }
 

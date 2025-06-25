@@ -156,8 +156,17 @@ public class Player extends Entity{
     public void contactFauna(int i){
         if (i != 999){
             if (invincible == false){
-                life -= 1;
-                invincible = true;
+                //player walks into fauna without invincibility
+                if (gp.fauna[i].faunaType == 1){
+                    //defensive fauna can give damage
+                    life -= 1;
+                    invincible = true;
+                }
+                if (gp.fauna[i].faunaType == 2){
+                    //offensive fauna can give damage
+                    life -= 1;
+                    invincible = true;
+                }
             }
 
         }

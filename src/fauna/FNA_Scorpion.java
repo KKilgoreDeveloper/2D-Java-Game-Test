@@ -8,6 +8,8 @@ import java.util.Random;
 public class FNA_Scorpion extends Entity{
     public FNA_Scorpion(GamePanel gp) {
         super(gp);
+        type = 2;
+        faunaType = 1;
         name = "Scorpion";
         speed = 1;
         maxLife = 4;

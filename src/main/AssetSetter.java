@@ -45,10 +45,10 @@ public class AssetSetter {
 
         gp.fauna[0] = new FNA_Scorpion(gp);
         gp.fauna[0].worldX = gp.tileSize*30;
-        gp.fauna[0].worldY = gp.tileSize*19;
+        gp.fauna[0].worldY = gp.tileSize*21;
 
         gp.fauna[1] = new FNA_Scorpion(gp);
         gp.fauna[1].worldX = gp.tileSize*17;
-        gp.fauna[1].worldY = gp.tileSize*28;
+        gp.fauna[1].worldY = gp.tileSize*26;
     }
 }

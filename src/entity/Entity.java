@@ -30,6 +30,8 @@ public class Entity {
     public BufferedImage image1, image2, image3;
     public String name;
     public boolean collision = false;
+    public int type; // 0 = player, 1 = npc, 2 = fauna
+    public int faunaType; // 0 = passive, 1 = defensive, 2 = offensive;
 
     // CHARACTER STATUS
     public int maxLife;
@@ -70,7 +72,15 @@ public class Entity {
         gp.cCheck.checkObject(this,false);
         gp.cCheck.checkEntity(this, gp.npc);
         gp.cCheck.checkEntity(this, gp.fauna);
-        gp.cCheck.checkPlayer(this);
+        boolean contactPlayer = gp.cCheck.checkPlayer(this);
+
+        if (this.type == 2 & contactPlayer == true){
+            if (gp.player.invincible == false){
+                //we can give damage
+                gp.player.life -= 1;
+                gp.player.invincible = true;
+            }
+        }
 
         //If collision is false, player can move
         if (collisionOn == false) {

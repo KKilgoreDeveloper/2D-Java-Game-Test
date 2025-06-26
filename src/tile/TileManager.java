@@ -42,7 +42,7 @@ public class TileManager {
         setup(23,"adobeinnercorner-right",true);
         setup(24,"adobeinnercorner-left",true);
         setup(34,"adobeinnercorner-upright",true);
-        setup(35,"adobeinnercorner-upleft",true);
+        setup(35,"adobeinnercorner-upleft",false);
         setup(30,"dirtcorner-up", true);
         setup(31,"dirtcorner-down", true);
         setup(32,"dirtcorner-left", true);

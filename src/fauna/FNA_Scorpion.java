@@ -26,14 +26,14 @@ public class FNA_Scorpion extends Entity{
     }
     public void getImage(){
 
-        up1 = setup("/fauna/scorpion-left1");
-        up2 = setup("/fauna/scorpion-left2");
-        down1 = setup("/fauna/scorpion-right1");
-        down2 = setup("/fauna/scorpion-right2");
-        left1 = setup("/fauna/scorpion-left1");
-        left2 = setup("/fauna/scorpion-left2");
-        right1 = setup("/fauna/scorpion-right1");
-        right2 = setup("/fauna/scorpion-right2");
+        up1 = setup("/fauna/scorpion-left1",gp.tileSize,gp.tileSize);
+        up2 = setup("/fauna/scorpion-left2",gp.tileSize,gp.tileSize);
+        down1 = setup("/fauna/scorpion-right1",gp.tileSize,gp.tileSize);
+        down2 = setup("/fauna/scorpion-right2",gp.tileSize,gp.tileSize);
+        left1 = setup("/fauna/scorpion-left1",gp.tileSize,gp.tileSize);
+        left2 = setup("/fauna/scorpion-left2",gp.tileSize,gp.tileSize);
+        right1 = setup("/fauna/scorpion-right1",gp.tileSize,gp.tileSize);
+        right2 = setup("/fauna/scorpion-right2",gp.tileSize,gp.tileSize);
 
     }
 

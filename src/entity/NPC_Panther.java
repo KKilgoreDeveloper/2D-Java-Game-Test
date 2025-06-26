@@ -18,14 +18,14 @@ public class NPC_Panther extends Entity{
 
     public void getImage(){
 
-        up1 = setup("/npc/panther-up1");
-        up2 = setup("/npc/panther-up2");
-        down1 = setup("/npc/panther-down1");
-        down2 = setup("/npc/panther-down2");
-        left1 = setup("/npc/panther-left1");
-        left2 = setup("/npc/panther-left2");
-        right1 = setup("/npc/panther-right1");
-        right2 = setup("/npc/panther-right2");
+        up1 = setup("/npc/panther-up1", gp.tileSize, gp.tileSize);
+        up2 = setup("/npc/panther-up2", gp.tileSize, gp.tileSize);
+        down1 = setup("/npc/panther-down1", gp.tileSize, gp.tileSize);
+        down2 = setup("/npc/panther-down2", gp.tileSize, gp.tileSize);
+        left1 = setup("/npc/panther-left1", gp.tileSize, gp.tileSize);
+        left2 = setup("/npc/panther-left2", gp.tileSize, gp.tileSize);
+        right1 = setup("/npc/panther-right1", gp.tileSize, gp.tileSize);
+        right2 = setup("/npc/panther-right2", gp.tileSize, gp.tileSize);
 
     }
     public void setDialogue(){

@@ -50,14 +50,14 @@ public class Player extends Entity{
     }
     public void getPlayerImage(){
 
-        up1 = setup("/player/coyote_up_1");
-        up2 = setup("/player/coyote_up_2");
-        down1 = setup("/player/coyote_down_1");
-        down2 = setup("/player/coyote_down_2");
-        left1 = setup("/player/coyote_left_1");
-        left2 = setup("/player/coyote_left_2");
-        right1 = setup("/player/coyote_right_1");
-        right2 = setup("/player/coyote_right_2");
+        up1 = setup("/player/coyote_up_1", gp.tileSizeP, gp.tileSizeP);
+        up2 = setup("/player/coyote_up_2", gp.tileSizeP, gp.tileSizeP);
+        down1 = setup("/player/coyote_down_1", gp.tileSizeP, gp.tileSizeP);
+        down2 = setup("/player/coyote_down_2", gp.tileSizeP, gp.tileSizeP);
+        left1 = setup("/player/coyote_left_1", gp.tileSizeP, gp.tileSizeP);
+        left2 = setup("/player/coyote_left_2", gp.tileSizeP, gp.tileSizeP);
+        right1 = setup("/player/coyote_right_1", gp.tileSizeP, gp.tileSizeP);
+        right2 = setup("/player/coyote_right_2", gp.tileSizeP, gp.tileSizeP);
 
     }
 

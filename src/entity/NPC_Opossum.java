@@ -17,14 +17,14 @@ public class NPC_Opossum extends Entity {
 
     public void getImage(){
 
-        up1 = setup("/npc/opossum-up1");
-        up2 = setup("/npc/opossum-up2");
-        down1 = setup("/npc/opossum-down1");
-        down2 = setup("/npc/opossum-down2");
-        left1 = setup("/npc/opossum-left1");
-        left2 = setup("/npc/opossum-left2");
-        right1 = setup("/npc/opossum-right1");
-        right2 = setup("/npc/opossum-right2");
+        up1 = setup("/npc/opossum-up1", gp.tileSize, gp.tileSize);
+        up2 = setup("/npc/opossum-up2", gp.tileSize, gp.tileSize);
+        down1 = setup("/npc/opossum-down1", gp.tileSize, gp.tileSize);
+        down2 = setup("/npc/opossum-down2", gp.tileSize, gp.tileSize);
+        left1 = setup("/npc/opossum-left1", gp.tileSize, gp.tileSize);
+        left2 = setup("/npc/opossum-left2", gp.tileSize, gp.tileSize);
+        right1 = setup("/npc/opossum-right1", gp.tileSize, gp.tileSize);
+        right2 = setup("/npc/opossum-right2", gp.tileSize, gp.tileSize);
 
     }
     public void setDialogue(){

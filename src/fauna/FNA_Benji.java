@@ -27,14 +27,14 @@ public class FNA_Benji extends Entity {
     }
     public void getImage(){
 
-        up1 = setup("/fauna/benji-left");
-        up2 = setup("/fauna/benji-left");
-        down1 = setup("/fauna/benji-right");
-        down2 = setup("/fauna/benji-right");
-        left1 = setup("/fauna/benji-left");
-        left2 = setup("/fauna/benji-left");
-        right1 = setup("/fauna/benji-right");
-        right2 = setup("/fauna/benji-right");
+        up1 = setup("/fauna/benji-left",gp.tileSize,gp.tileSize);
+        up2 = setup("/fauna/benji-left",gp.tileSize,gp.tileSize);
+        down1 = setup("/fauna/benji-right",gp.tileSize,gp.tileSize);
+        down2 = setup("/fauna/benji-right",gp.tileSize,gp.tileSize);
+        left1 = setup("/fauna/benji-left",gp.tileSize,gp.tileSize);
+        left2 = setup("/fauna/benji-left",gp.tileSize,gp.tileSize);
+        right1 = setup("/fauna/benji-right",gp.tileSize,gp.tileSize);
+        right2 = setup("/fauna/benji-right",gp.tileSize,gp.tileSize);
 
     }
     public void setAction(){

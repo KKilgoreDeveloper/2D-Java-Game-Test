@@ -17,14 +17,14 @@ public class NPC_Fawn extends Entity{
 
     public void getImage(){
 
-        up1 = setup("/npc/fawn-up1");
-        up2 = setup("/npc/fawn-up2");
-        down1 = setup("/npc/fawn-down1");
-        down2 = setup("/npc/fawn-down2");
-        left1 = setup("/npc/fawn-left1");
-        left2 = setup("/npc/fawn-left2");
-        right1 = setup("/npc/fawn-right1");
-        right2 = setup("/npc/fawn-right2");
+        up1 = setup("/npc/fawn-up1", gp.tileSize, gp.tileSize);
+        up2 = setup("/npc/fawn-up2", gp.tileSize, gp.tileSize);
+        down1 = setup("/npc/fawn-down1", gp.tileSize, gp.tileSize);
+        down2 = setup("/npc/fawn-down2", gp.tileSize, gp.tileSize);
+        left1 = setup("/npc/fawn-left1", gp.tileSize, gp.tileSize);
+        left2 = setup("/npc/fawn-left2", gp.tileSize, gp.tileSize);
+        right1 = setup("/npc/fawn-right1", gp.tileSize, gp.tileSize);
+        right2 = setup("/npc/fawn-right2", gp.tileSize, gp.tileSize);
 
     }
     public void setDialogue(){

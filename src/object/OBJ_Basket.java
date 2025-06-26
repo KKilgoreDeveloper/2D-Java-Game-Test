@@ -8,6 +8,6 @@ public class OBJ_Basket extends Entity {
     public OBJ_Basket(GamePanel gp){
         super(gp);
         name = "Basket";
-        down1 = setup("/objects/basket");
+        down1 = setup("/objects/basket",gp.tileSize,gp.tileSize);
     }
 }

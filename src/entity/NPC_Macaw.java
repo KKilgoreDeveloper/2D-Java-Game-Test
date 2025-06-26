@@ -17,14 +17,14 @@ public class NPC_Macaw extends Entity{
 
     public void getImage(){
 
-        up1 = setup("/npc/macaw-up1");
-        up2 = setup("/npc/macaw-up2");
-        down1 = setup("/npc/macaw-down1");
-        down2 = setup("/npc/macaw-down2");
-        left1 = setup("/npc/macaw-left1");
-        left2 = setup("/npc/macaw-left2");
-        right1 = setup("/npc/macaw-right1");
-        right2 = setup("/npc/macaw-right2");
+        up1 = setup("/npc/macaw-up1", gp.tileSize, gp.tileSize);
+        up2 = setup("/npc/macaw-up2", gp.tileSize, gp.tileSize);
+        down1 = setup("/npc/macaw-down1", gp.tileSize, gp.tileSize);
+        down2 = setup("/npc/macaw-down2", gp.tileSize, gp.tileSize);
+        left1 = setup("/npc/macaw-left1", gp.tileSize, gp.tileSize);
+        left2 = setup("/npc/macaw-left2", gp.tileSize, gp.tileSize);
+        right1 = setup("/npc/macaw-right1", gp.tileSize, gp.tileSize);
+        right2 = setup("/npc/macaw-right2", gp.tileSize, gp.tileSize);
 
     }
     public void setDialogue(){

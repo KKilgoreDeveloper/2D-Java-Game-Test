@@ -66,6 +66,11 @@ public class TileManager {
         setup(29,"dirtcorner-right", true);
         //sand
         setup(12,"sand", false);
+        setup(36,"cornersand-leftdown", false);
+        setup(37,"cornersand-leftup", false);
+        setup(38,"cornersand-leftdown", false);
+        setup(39,"cornersand-rightdown", false);
+        setup(40,"cornersand-rightup", false);
         //plants
         setup(13,"maguey", true);
     }

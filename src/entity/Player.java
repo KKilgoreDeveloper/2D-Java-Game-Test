@@ -63,7 +63,7 @@ public class Player extends Entity{
 
     public void update(){
 
-        if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true){
+        if(keyH.upPressed == true || keyH.downPressed == true || keyH.leftPressed == true || keyH.rightPressed == true || keyH.enterPressed == true){
 
         if(keyH.upPressed == true){
             direction = "up";
@@ -76,6 +76,9 @@ public class Player extends Entity{
         }
         if(keyH.rightPressed == true){
             direction = "right";
+        }
+        if(keyH.enterPressed == true){
+
         }
 
         //CHECK TILE COLLISION
@@ -97,24 +100,25 @@ public class Player extends Entity{
 
         //CHECK EVENT
         gp.eHandler.checkEvent();
-        gp.keyH.enterPressed = false;
 
         //If collision is false, player can move
-            if (collisionOn == false) {
-                switch (direction) {
-                    case "up": worldY -= speed; break;
-                    case "down": worldY += speed; break;
-                    case "left": worldX -= speed; break;
-                    case "right": worldX += speed; break;
-                }
+        if (collisionOn == false && keyH.enterPressed == false) {
+            switch (direction) {
+                case "up": worldY -= speed; break;
+                case "down": worldY += speed; break;
+                case "left": worldX -= speed; break;
+                case "right": worldX += speed; break;
             }
-            spriteCounter++;
-            if(spriteCounter > 11){
-                if(spriteNum==1){
-                    spriteNum = 2;
-                } else if (spriteNum == 2){
-                    spriteNum = 1;
-                }
+        }
+        gp.keyH.enterPressed = false;
+
+        spriteCounter++;
+        if(spriteCounter > 11){
+            if(spriteNum==1){
+                spriteNum = 2;
+            } else if (spriteNum == 2){
+                spriteNum = 1;
+            }
                 spriteCounter = 0;
             }
         } else {

@@ -22,7 +22,7 @@ public class AssetSetter {
 
         gp.obj[0] = new OBJ_Curtain(gp);
         gp.obj[0].worldX = gp.tileSize*6;
-        gp.obj[0].worldY = gp.tileSize*8;
+        gp.obj[0].worldY = gp.tileSize*9;
     }
     public void setNPC() {
 

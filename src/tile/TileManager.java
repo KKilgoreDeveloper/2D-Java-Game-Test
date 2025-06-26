@@ -35,6 +35,12 @@ public class TileManager {
 
         //adobe wall
         setup(1,"adobewallupdated", true);
+        setup(19,"adobecorner-leftup",true);
+        setup(20,"adobecorner-leftdown",true);
+        setup(21,"adobecorner-rightup",true);
+        setup(22,"adobecorner-rightdown",true);
+        setup(23,"adobeinnercorner-right",true);
+        setup(24,"adobeinnercorner-left",true);
         //water
         setup(2,"water", false);
         setup(3,"wateredge-down", true);
@@ -47,6 +53,10 @@ public class TileManager {
         setup(10,"watercorner-rightup", true);
         //dirt
         setup(11,"dirt", false);
+        setup(25,"dirtcorner-leftdown", false);
+        setup(26,"dirtcorner-leftup", false);
+        setup(27,"dirtcorner-rightdown", false);
+        setup(28,"dirtcorner-rightup", false);
         //sand
         setup(12,"sand", false);
         //plants

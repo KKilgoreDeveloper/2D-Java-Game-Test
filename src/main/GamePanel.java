@@ -14,10 +14,12 @@ import java.util.Comparator;
 public class GamePanel extends JPanel implements Runnable {
     //SCREEN SETTINGS
     final int originalTileSize = 16; //16x16 tile
+   // final int teteoTileSize = 24; //24x24
     //Scaling
     final int scale = 3;
     public final int tileSize= originalTileSize * scale; //48x48tile
     public final int tileSizeP= originalTileSize * 3; //48x48tile Player scale
+  //  public final int teteoSize= teteoTileSize * 4; //Teteo scale
     public final int maxScreenCol =16;
     public final int maxScreenRow = 12;
     public final int screenWidth = tileSize * maxScreenCol; //768 pixels

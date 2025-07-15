@@ -4,12 +4,13 @@ import main.GamePanel;
 
 import java.util.Random;
 
-public class NPC_Fawn extends Entity{
-    public NPC_Fawn(GamePanel gp) {
+public class TEO_Itz extends Entity{
+    public TEO_Itz(GamePanel gp) {
         super(gp);
 
         direction = "down";
         speed = 1;
+
 
         getImage();
         setDialogue();
@@ -17,20 +18,20 @@ public class NPC_Fawn extends Entity{
 
     public void getImage(){
 
-        up1 = setup("/npc/fawn-up1", gp.tileSize, gp.tileSize);
-        up2 = setup("/npc/fawn-up2", gp.tileSize, gp.tileSize);
-        down1 = setup("/npc/fawn-down1", gp.tileSize, gp.tileSize);
-        down2 = setup("/npc/fawn-down2", gp.tileSize, gp.tileSize);
-        left1 = setup("/npc/fawn-left1", gp.tileSize, gp.tileSize);
-        left2 = setup("/npc/fawn-left2", gp.tileSize, gp.tileSize);
-        right1 = setup("/npc/fawn-right1", gp.tileSize, gp.tileSize);
-        right2 = setup("/npc/fawn-right2", gp.tileSize, gp.tileSize);
+        up1 = setup("/npc/Itzpapalotl-left", gp.tileSize, gp.tileSize);
+        up2 = setup("/npc/Itzpapalotl-left", gp.tileSize, gp.tileSize);
+        down1 = setup("/npc/Itzpapalotl-right", gp.tileSize, gp.tileSize);
+        down2 = setup("/npc/Itzpapalotl-right", gp.tileSize, gp.tileSize);
+        left1 = setup("/npc/Itzpapalotl-left", gp.tileSize, gp.tileSize);
+        left2 = setup("/npc/Itzpapalotl-left", gp.tileSize, gp.tileSize);
+        right1 = setup("/npc/Itzpapalotl-right", gp.tileSize, gp.tileSize);
+        right2 = setup("/npc/Itzpapalotl-right", gp.tileSize, gp.tileSize);
 
     }
     public void setDialogue(){
-        dialogues[0] = "Hello! I haven't seen you around@before.@I HOPE YOU'RE NOT A DANGER *hehe*";
-        dialogues[1] = "Let's be friends!";
-        dialogues[2] = "Where are you from???";
+        dialogues[0] = "Hello you.";
+        dialogues[1] = "Do you know who I am?";
+        dialogues[2] = "Do you know what I am?";
     }
     public void setAction(){
 

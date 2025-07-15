@@ -10,6 +10,7 @@ import object.OBJ_Basket;
 import object.OBJ_Headdress;
 import object.OBJ_Key;
 import object.OBJ_Curtain;
+import entity.TEO_Itz;
 
 public class AssetSetter {
 
@@ -26,21 +27,25 @@ public class AssetSetter {
     }
     public void setNPC() {
 
-        gp.npc[0] = new NPC_Fawn(gp);
-        gp.npc[0].worldX = gp.tileSize*21;
-        gp.npc[0].worldY = gp.tileSize*21;
+       // gp.npc[0] = new NPC_Fawn(gp);
+       // gp.npc[0].worldX = gp.tileSize*21;
+       // gp.npc[0].worldY = gp.tileSize*21;
 
         gp.npc[1] = new NPC_Panther(gp);
         gp.npc[1].worldX = gp.tileSize*24;
         gp.npc[1].worldY = gp.tileSize*24;
 
-        gp.npc[2] = new NPC_Macaw(gp);
-        gp.npc[2].worldX = gp.tileSize*34;
-        gp.npc[2].worldY = gp.tileSize*25;
+       // gp.npc[2] = new NPC_Macaw(gp);
+       // gp.npc[2].worldX = gp.tileSize*34;
+       // gp.npc[2].worldY = gp.tileSize*25;
 
         gp.npc[3] = new NPC_Opossum(gp);
         gp.npc[3].worldX = gp.tileSize*13;
         gp.npc[3].worldY = gp.tileSize*23;
+
+        //gp.npc[4] = new TEO_Itz(gp);
+        //gp.npc[4].worldX = gp.tileSize*34;
+        //gp.npc[4].worldY = gp.tileSize*25;
     }
     public void setFauna() {
 
